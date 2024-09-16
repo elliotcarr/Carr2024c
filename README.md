@@ -1,3 +1,6 @@
 # Carr2024c
 
-Code will be available when paper goes out to review.
+MATLAB code for the manuscript:
+
+EJ Carr (2024) "Stochastic models of advection-diffusion in layered media"
+https://arxiv.org/abs/2409.08447
