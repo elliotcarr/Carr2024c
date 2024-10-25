@@ -18,6 +18,10 @@ time_discretisation = 'exact exponential';
 animation = false; Nr = 5; stochastic_algorithm = '2';
 colors = [128,0,0; 245,130,48; 0 0 128; 0 130 200]/255;
 
+% Store figures in subfolder
+mkdir Figures
+path_name = './Figures/';
+
 %% Problems
 % L is length of domain and Nx is number of lattice sites
 % model = '1'; L = 1; Nx = 101; xmin = 0.4; xmax = 0.6; D = 0.1; params.D = D;
@@ -225,7 +229,6 @@ if stochastic_algorithm2 && ~animation
         xlabel(fig1,'Position','FontSize',22)
         ylabel(fig1,'Particle Number','FontSize',22)
     end
-    path_name = '/Users/carre/Dropbox/Documents/Research/Projects/1D Random Walk/Paper/Figures/';
     print(gcf,[path_name,'Problem_Stochastic',num2str(model)],'-depsc2')
 end
 
@@ -252,6 +255,5 @@ if ~animation
         leglabels{i} = [' {\itt} = ',num2str((nindx(i)-1)*tau,'%g')];
     end
     legend(leg,leglabels)
-    path_name = '/Users/carre/Dropbox/Documents/Research/Projects/1D Random Walk/Paper/Figures/';
     print(gcf,[path_name,'Problem',num2str(model)],'-depsc2')
 end
